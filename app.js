@@ -11,7 +11,7 @@ mongoose.connect('mongodb+srv://mrrrxiii:' + process.env.MONGO_ATLAS_PW + '@clus
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
-
+mongoose.Promise = global.Promise
 app.use(morgan('dev'))
 
 app.use(bodyParser.urlencoded({
